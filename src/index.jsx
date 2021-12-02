@@ -1,4 +1,8 @@
+// Packages
 import React from 'react'
+import { render } from 'react-dom'
+
+// Components
 import { App } from './App'
 
-const Wrapper = () => <h1>Hello World</h1>
+render(<App />, document.getElementById('root'))
