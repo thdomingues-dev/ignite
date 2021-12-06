@@ -4,6 +4,9 @@ import React from 'react'
 // Components
 import RepositoryItem from './RepositoryItem'
 
+// Styles
+import '../styles/repositories.scss'
+
 const RepositoryList = () => (
   <section className="repository-list">
     <h1>Lista de Repositórios</h1>
