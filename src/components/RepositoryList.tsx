@@ -1,5 +1,5 @@
 // Packages
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, FC } from 'react'
 
 // Components
 import RepositoryItem from './RepositoryItem'
@@ -9,9 +9,14 @@ import '../styles/repositories.scss'
 
 //https://api.github.com/users/thdomingues-dev/repos
 
-const RepositoryList = () => {
-  const [repositories, setRepositories] = useState([])
+interface Repository {
+  name: string
+  description: string
+  html_url: string
+}
 
+const RepositoryList: FC = () => {
+  const [repositories, setRepositories] = useState<Array<Repository>>([])
 
   useEffect(() => {
     fetch('https://api.github.com/users/thdomingues-dev/repos')
